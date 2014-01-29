@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DropDown</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="department_array">
+        <item>CS</item>
+        <item>ECE</item>
+        <item>MATH</item>
+        <item>CHEM</item>
+        <item>PSTAT</item>
+        <item>PHYS</item>
+    </string-array>
+    <string-array name="course_array">
+        <item>CS 48</item>
+        <item>CS 56</item>
+        <item>CS 64</item>
+    </string-array>
+
+    <string name="title_activity_search_courses">SearchCourses</string>
+    <string name="hello_world">Hello world!</string>
+
+</resources>
