@@ -149,8 +149,6 @@ public class CourseSearch {
 						}
 					}
 				}
-				courseOptions.add("See All");
-				courseOptionsIndex.add(-1);
 			} catch ( FailingHttpStatusCodeException e1 )
 			{
 				System.out.println( "FailingHttpStatusCodeException thrown:" + e1.getMessage() );
@@ -295,11 +293,7 @@ public class CourseSearch {
 		}
 	}
 	
-	//Getters for Selected Lecture or All Lectures
-	public List<Lecture> getAllLectures() {
-		return this.allLectures;
-	}
-	
+	//Getter for Selected Lecture
 	public Lecture getLecture() {
 		return this.theLecture;
 	}
@@ -308,15 +302,6 @@ public class CourseSearch {
 	public boolean setLectures() {
 		if (courseIndex == -50) {
 			return false;
-		}
-		else if (courseIndex == -1) {
-			System.out.println("This Crashed my PC. Removing this feature later...");
-			return false;
-			//allLectures = new ArrayList<Lecture>();
-			//while (courseIndex < courses.size()-1) {
-			//	allLectures.add(performResult(courseIndex+1));
-			//}
-			//return false;
 		}
 		else {
 			this.theLecture = this.performResult(courseIndex);
@@ -471,15 +456,8 @@ public class CourseSearch {
 			System.out.println(test.getLecture().toString());
 		}
 		else {
-			if (test.getAllLectures() == null) {
 				System.out.println("We could not find any classes");
 				return;
-			}
-			else {
-				for (Lecture allTheLectures: test.getAllLectures()) {
-					System.out.println(allTheLectures.toString());
-				}
-			}
 		}
 	}
 }
